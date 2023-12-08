@@ -1,0 +1,106 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Lightpink: hsl(275, 100%, 97%);
+    --Grayishpurple: hsl(293, 31%, 39%);
+    --Purple: hsl(291, 62%, 34%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background: url(/assets/images/background-pattern-desktop.svg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Work Sans',sans-serif;
+    background-color: var(--Lightpink);
+    gap: 30px;
+}
+.container{
+    height: fit-content;
+    width: 600px;
+    background: var(--White);
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.04);
+    cursor:pointer;
+    padding: 20px 0px;
+}
+.heading{
+    padding: 30px;
+    font-weight: 700;
+    display: flex;
+}
+.heading h1{
+     font-size: 40px;
+     margin-left: 20px;
+}
+.accordian{
+    margin: 10px 0px 20px 0px;
+}
+.questionbox{
+    padding: 10px 20px 10px 40px;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+}
+.questionbox:hover{
+    color:var(--Purple);   
+}
+.answer p{
+    color: var(--Grayishpurple);
+    padding: 10px 20px 10px 40px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.attribution{
+     font-size: 11px; text-align: center; 
+    }
+.attribution a{
+     color: hsl(228, 45%, 44%); 
+    }
+ @media (max-width: 540px) {
+        body {
+            height: auto;
+            background-image: url(/assets/images/background-pattern-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            box-sizing: border-box;
+        }
+    
+        .container {
+            max-width: 80%; /* Adjusted for smaller screens */
+            height: auto;
+
+        }
+        .heading h1 {
+            font-size: 1.5rem; /* Adjusted font size for smaller screens */
+        }
+    
+        .answer p {
+            font-size: 0.9rem; /* Adjusted font size for smaller screens */
+        }
+    }
+    @media (min-width: 1440px) {
+        body {
+            height: auto;
+            box-sizing: border-box;
+        }
+        .container {
+            min-width: 50%; /* Adjusted for better responsiveness on larger screens */
+        }
+        .heading h1 {
+            font-size: 2.5rem; /* Adjusted font size for smaller screens */
+        }
+    
+        .answer p {
+            font-size: 1rem; /* Adjusted font size for smaller screens */
+        }
+    }
